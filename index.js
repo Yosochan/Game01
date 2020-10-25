@@ -18,11 +18,12 @@ function init(){
     gc = cv.getContext("2d");
     gc.imageSmoothingEnabled= false;
     onkeydown = key_process;
-    onmousedown = mouse_process;
+    onmousedown  = mouse_process;
     ontouchstart = touch_process;
     timer = setInterval(game_process, 20);
     audio_trigger = false;
-    
+    music_game.loop = true;
+
     reset(0);
 }
 
@@ -144,6 +145,7 @@ function game_sub_process(){
     else{
         score++;
     }
+
 }
 
 function game_draw_process(){
@@ -297,7 +299,7 @@ function audio_process(){
 }
 
 function touch_process(event){
-    mouse_process({ x:event.clientX, y:event.clientY });
+    mouse_process({ x:event.pageX, y:event.pageY });
 }
 
 function mouse_process(event){
