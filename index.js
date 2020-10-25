@@ -297,7 +297,7 @@ function audio_process(){
 }
 
 function touch_process(event){
-    mouse_process({ x:event.pageX, y:event.pageY });
+    mouse_process({ x:event.clientX, y:event.clientY });
 }
 
 function mouse_process(event){
