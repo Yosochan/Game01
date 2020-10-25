@@ -105,7 +105,7 @@ function base_draw_process(){
 
 function title_draw_process(){
     gc.drawImage(imgFlygon,(cv.width-imgFlygon.width)*0.2, max_fy- imgFlygon.height, imgFlygon.width, imgFlygon.height);
-    gc.drawImage(imgTitle, (cv.width-imgTitle.width)*0.5, (cv.height-imgTitle.height)*0.8, imgTitle.width, imgTitle.height);
+    gc.drawImage(imgTitle, (cv.width-imgTitle.width)*0.5, (cv.height-imgTitle.height)*0.5, imgTitle.width, imgTitle.height);
     
     if(audio_trigger == false){
         gc.drawImage(imgMaudio, 0, 0, imgAudio.width, imgAudio.height)
