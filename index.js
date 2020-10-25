@@ -19,13 +19,8 @@ function init(){
     gc.imageSmoothingEnabled= false;
     onkeydown = key_process;
     onmousedown = mouse_process;
-    ontouchstart = mouse_process;
+    ontouchstart = touch_process;
     timer = setInterval(game_process, 20);
-    /*
-    music_title = new Audio('FTheme-title.mp3');
-    music_game = new Audio('FTheme-dash.mp3');
-    music_over = new Audio('short_bomb.mp3');
-    */
     audio_trigger = false;
     
     reset(0);
@@ -299,6 +294,10 @@ function audio_process(){
         music_title.play();
     }
     
+}
+
+function touch_process(event){
+    mouse_process({ x:event.pageX, y:event.pageY });
 }
 
 function mouse_process(event){
